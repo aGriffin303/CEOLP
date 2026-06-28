@@ -830,20 +830,17 @@ const handleSubmit = (e) => {
               </label>
             </div>
 
-            <div className="button-group">
-              <button type="button" className="secondary-btn" onClick={goToPreviousSection}>Back</button>
-              <button 
-                type="submit" 
-                className="primary-btn"
-                disabled={
-				  !formData.understandNotAdvanceDirective ||
-				  !formData.understandDiscussWithFamily ||
-				  !formData.understandVitalRecordsConfidential
-				}
-              >
-                {submitting ? 'Submitting...' : 'Submit'}
-              </button>
-            </div>
+            <button 
+			  type="submit" 
+			  className="primary-btn"
+			  disabled={
+				!formData.understandNotAdvanceDirective ||
+				!formData.understandDiscussWithFamily ||
+				!formData.understandVitalRecordsConfidential
+			  }
+			>
+			  Submit
+			</button>
           </section>
         )}
       </form>
