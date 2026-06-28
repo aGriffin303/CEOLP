@@ -104,12 +104,13 @@ const handleSubmit = async (e) => {
   
   const scriptUrl = 'https://script.google.com/macros/s/AKfycbyOUlm3QYcJDS-YBsNfjWCx72ObpTyl_WFLoDc5lqHMOj38aj8y3xH2wEP3-SmjBw/exec';
   
-await fetch(scriptUrl, {
-  method: 'POST',
-  body: JSON.stringify(formData),
-});
+  try {
+    await fetch(scriptUrl, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+    });
 
-setFormData(prev => ({ ...prev, submitted: true }));
+    setFormData(prev => ({ ...prev, submitted: true }));
   } catch (error) {
     console.error('Error:', error);
     alert('Error submitting form: ' + error.message);
