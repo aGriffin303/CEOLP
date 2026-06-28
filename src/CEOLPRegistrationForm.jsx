@@ -185,17 +185,16 @@ const handleSubmit = (e) => {
         {/* ELIGIBILITY */}
         {currentSection === 'eligibility' && (
           <section className="form-section">
-            <h2>Let's start with eligibility</h2>
+            <h2>Eligibility</h2>
             <p className="section-description">CEOLP services are available only to Saguache County residents who have lived here for 90+ consecutive days.</p>
             
             <div className="form-group">
-              <label>Street Address</label>
+              <label>Your Street Address</label>
               <input
                 type="text"
                 name="address"
                 value={formData.address}
                 onChange={handleInputChange}
-                placeholder="123 Main Street"
               />
             </div>
 
@@ -206,7 +205,6 @@ const handleSubmit = (e) => {
                 name="city"
                 value={formData.city}
                 onChange={handleInputChange}
-                placeholder="Crestone"
               />
             </div>
 
@@ -217,7 +215,6 @@ const handleSubmit = (e) => {
                 name="zip"
                 value={formData.zip}
                 onChange={handleInputChange}
-                placeholder="81131"
               />
             </div>
 
@@ -261,7 +258,6 @@ const handleSubmit = (e) => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="you@example.com"
                 required
               />
             </div>
@@ -273,7 +269,6 @@ const handleSubmit = (e) => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                placeholder="(719) 555-1234"
                 required
               />
             </div>
@@ -345,7 +340,6 @@ const handleSubmit = (e) => {
                 name="repName"
                 value={formData.repName}
                 onChange={handleInputChange}
-                placeholder="Jane Doe"
                 required
               />
             </div>
@@ -357,7 +351,6 @@ const handleSubmit = (e) => {
                 name="repPhone"
                 value={formData.repPhone}
                 onChange={handleInputChange}
-                placeholder="(719) 555-1234"
                 required
               />
             </div>
@@ -369,7 +362,6 @@ const handleSubmit = (e) => {
                 name="repEmail"
                 value={formData.repEmail}
                 onChange={handleInputChange}
-                placeholder="jane@example.com"
                 required
               />
             </div>
@@ -380,7 +372,6 @@ const handleSubmit = (e) => {
                 name="repAddress"
                 value={formData.repAddress}
                 onChange={handleInputChange}
-                placeholder="123 Main St, Crestone, CO 81131"
                 rows="3"
                 required
               />
@@ -409,7 +400,6 @@ const handleSubmit = (e) => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  placeholder="John Michael Smith"
                   required
                 />
                 <p className="field-hint">Must match your Social Security card</p>
@@ -464,7 +454,6 @@ const handleSubmit = (e) => {
                   name="placeOfBirth"
                   value={formData.placeOfBirth}
                   onChange={handleInputChange}
-                  placeholder="Denver, Colorado"
                 />
               </div>
 
@@ -536,7 +525,6 @@ const handleSubmit = (e) => {
                   name="occupation"
                   value={formData.occupation}
                   onChange={handleInputChange}
-                  placeholder="e.g., carpenter, teacher"
                 />
               </div>
 
@@ -547,7 +535,6 @@ const handleSubmit = (e) => {
                   name="industry"
                   value={formData.industry}
                   onChange={handleInputChange}
-                  placeholder="e.g., construction, education"
                 />
               </div>
 
