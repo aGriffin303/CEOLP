@@ -98,24 +98,9 @@ const CEOLPRegistrationForm = () => {
     }
   };
 
-const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
-  setSubmitting(true);
-  
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbyOUlm3QYcJDS-YBsNfjWCx72ObpTyl_WFLoDc5lqHMOj38aj8y3xH2wEP3-SmjBw/exec';
-  
-  try {
-    await fetch(scriptUrl, {
-      method: 'POST',
-      body: JSON.stringify(formData),
-    });
-    
-    setFormData(prev => ({ ...prev, submitted: true }));
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Error submitting form: ' + error.message);
-    setSubmitting(false);
-  }
+  setFormData(prev => ({ ...prev, submitted: true }));
 };
 
   const goToNextSection = () => {
