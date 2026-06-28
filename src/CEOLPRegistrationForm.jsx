@@ -4,7 +4,6 @@ import './App.css';
 const CEOLPRegistrationForm = () => {
   const [currentSection, setCurrentSection] = useState('eligibility');
   const [eligibilityStatus, setEligibilityStatus] = useState(null);
-  const [submitting, setSubmitting] = useState(false);
   
   const [formData, setFormData] = useState({
     address: '',
@@ -837,11 +836,10 @@ const handleSubmit = (e) => {
                 type="submit" 
                 className="primary-btn"
                 disabled={
-                  submitting ||
-                  !formData.understandNotAdvanceDirective ||
-                  !formData.understandDiscussWithFamily ||
-                  !formData.understandVitalRecordsConfidential
-                }
+				  !formData.understandNotAdvanceDirective ||
+				  !formData.understandDiscussWithFamily ||
+				  !formData.understandVitalRecordsConfidential
+				}
               >
                 {submitting ? 'Submitting...' : 'Submit'}
               </button>
